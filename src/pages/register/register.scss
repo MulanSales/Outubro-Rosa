@@ -1,0 +1,51 @@
+.cadastro-wrap {
+			ion-list {
+			    margin: 35px 0px 60px 50px !important;
+			}
+
+			h1 {
+			    text-align: center;
+			    font-family: Comic Sans MS;
+			    font-weight: 800;
+			    font-size: 40px;
+			    color: #ffffff;
+			    margin-top: 5px;
+			}
+
+			p {
+			    margin: 0 0 0 30px;
+			    font-weight: 100;
+			    color: #ffffff;
+			    float: left;
+			    font-size: 15px;
+			    span {
+			        font-weight: 600;
+			        cursor: pointer;
+			    }
+			}
+     .icone-outubrorosa {
+          margin: -5px auto;
+          width: 190px;
+          height: 155px;
+          display: block !important;
+      }
+
+      .item {
+          width: 85%;
+          border-radius: 30px;
+          margin-bottom: 15px;
+      }
+
+      .botao-cadastro {
+					height: 45px;
+					width: 85%;
+					margin: 0 auto;
+					background: #e36ba2 !important;
+					color: #ffffff !important;
+					border-style: solid !important;
+					border: 2px !important;
+					border-color: #ffffff !important;
+					z-index: 999;
+					border-radius: 15px;
+      }
+}

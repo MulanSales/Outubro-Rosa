@@ -1,0 +1,96 @@
+
+<ion-header>
+
+<ion-navbar color="lassie_default">
+    
+    <button ion-button color="lassie_default" icon-only (click)="fechar()">
+        <ion-icon name="close"></ion-icon>
+    </button>
+
+    <ion-title>Editar Dados Tumor</ion-title>
+
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="tumor_update" color="lassie_default">
+      <ion-segment-button value="display">
+        <ion-icon name="clipboard"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="update">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div [ngSwitch]="tumor_update">
+		<ion-list *ngSwitchCase="'update'">
+		      <ion-item>
+        		<ion-label fixed>Local:</ion-label>
+       			<ion-input type="text" [(ngModel)]="tumor.local"></ion-input>
+  			   </ion-item>
+
+			  <ion-item>
+			        <ion-label fixed>Tamanho:</ion-label>
+			        <ion-input type="number" [(ngModel)]="tumor.tamanho"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>Lateralidade:</ion-label>
+			      <ion-select [(ngModel)]="tumor.lateralidade">
+			          <ion-option value="1">Direita</ion-option>
+			          <ion-option value="2">Esquerda</ion-option>
+			          <ion-option value="3">Bilateral</ion-option>
+			          <ion-option value="9">Sem Informação</ion-option>
+			      </ion-select>
+			  </ion-item>
+
+			  <ion-item>
+			        <ion-label fixed>Tempo de Evolução:</ion-label>
+			        <ion-input type="number" [(ngModel)]="tumor.tempo_evolucao"></ion-input>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>Em Tratamento:</ion-label>
+			      <ion-select [(ngModel)]="tumor.em_tratamento">
+			          <ion-option value="1">Sim</ion-option>
+			          <ion-option value="2">Não</ion-option>
+			          <ion-option value="9">Sem Informação</ion-option>
+			      </ion-select>
+			  </ion-item>
+
+			  <ion-item>
+			    <ion-label fixed>Conhecimento Prévio:</ion-label>
+			      <ion-select [(ngModel)]="tumor.conhecimento_previo">
+			          <ion-option value="1">Sim</ion-option>
+			          <ion-option value="2">Não</ion-option>
+			          <ion-option value="9">Sem Informação</ion-option>
+			      </ion-select>
+			  </ion-item>
+
+			  <ion-item>
+			        <ion-label fixed>Observações:</ion-label>
+			        <ion-textarea type="text" [(ngModel)]="tumor.observacoes"></ion-textarea>>
+			  </ion-item>
+
+				<ion-item>
+      				<button ion-button color="lassie_default" (click)="salvarDados()">Atualizar</button>
+    			</ion-item>
+
+			</ion-list>
+
+			<ion-list *ngSwitchCase="'display'">
+			<ion-item *ngIf="tumor_car"  >
+				<img src="assets/img/dog.png">
+				<div>
+              		Local: {{tumor_car.local}}
+        		</div>
+			</ion-item>
+		</ion-list>
+
+		</div>
+
+</ion-content>

@@ -1,0 +1,170 @@
+<!--
+  Generated template for the AnimalPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-title>Animal</ion-title>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-list>
+  	<ion-item>
+        	<ion-label fixed>Nome:</ion-label>
+        	<ion-input type="text" [(ngModel)]="animal.nome"></ion-input>
+     	</ion-item>
+
+     	<ion-item>
+        	<ion-label fixed>Data de Nascimento:</ion-label>
+        	<ion-input type="date" [(ngModel)]="animal.data_de_nascimento"></ion-input>
+     	</ion-item>
+
+      <ion-item>
+        	<ion-label fixed>Idade:</ion-label>
+        	<ion-input type="number" [(ngModel)]="animal.idade"></ion-input>
+     	</ion-item>
+
+     	<ion-item>
+        	<ion-label fixed>Raça:</ion-label>
+        	<ion-input type="text" [(ngModel)]="animal.raca"></ion-input>
+     	</ion-item>
+
+     	<ion-item>
+        	<ion-label fixed>Data de Castração:</ion-label>
+        	<ion-input type="date" [(ngModel)]="animal.data_de_castracao"></ion-input>
+     	</ion-item>
+
+      <ion-item>
+        <ion-label fixed>Sexo:</ion-label>
+        	<ion-select [(ngModel)]="animal.sexo">
+        		    <ion-option value="1">Fêmea</ion-option>
+              	<ion-option value="2">Macho</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+
+      <ion-item>
+        <ion-label fixed>Porte:</ion-label>
+        	<ion-select [(ngModel)]="animal.porte">
+        		    <ion-option value="1">Pequeno</ion-option>
+              	<ion-option value="2">Médio</ion-option>
+              	<ion-option value="3">Grande</ion-option>
+              	<ion-option value="4">Gigante</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Espécie:</ion-label>
+        	<ion-select [(ngModel)]="animal.especie">
+        		    <ion-option value="1">Canino</ion-option>
+              	<ion-option value="2">Felino</ion-option>
+              	<ion-option value="8">Outro</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Estado Reprodutivo:</ion-label>
+        	<ion-select [(ngModel)]="animal.castracao">
+        		    <ion-option value="1">Inteira</ion-option>
+              	<ion-option value="2">Castrado</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+      <ion-item>
+        <ion-label fixed>Motivo da Castração:</ion-label>
+        	<ion-select [(ngModel)]="animal.motivo_de_castracao">
+        		    <ion-option value="1">Adquiriu Castrado</ion-option>
+              	<ion-option value="2">Eletiva</ion-option>
+              	<ion-option value="3">Motivos de saúde</ion-option>
+              	<ion-option value="4">Evitar Cancêr de Mama</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+              	<ion-option value="10">Não se Aplica</ion-option>
+          </ion-select>
+     	</ion-item>
+
+      <ion-item>
+        <ion-label fixed>Ciclo Estral:</ion-label>
+        	<ion-select [(ngModel)]="animal.ciclo_estral">
+        		    <ion-option value="1">Antes do 1º</ion-option>
+              	<ion-option value="2">Entre o 1º e o 2º</ion-option>
+              	<ion-option value="2">Após o 2º</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Uso de Anticoncepcional:</ion-label>
+        	<ion-select [(ngModel)]="animal.anticoncepcional">
+        		    <ion-option value="1">Sim</ion-option>
+              	<ion-option value="2">Não</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Participação na última campanha:</ion-label>
+        	<ion-select [(ngModel)]="animal.ultima_campanha">
+        		    <ion-option value="1">Sim</ion-option>
+              	<ion-option value="2">Não</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Histórico de Pseudociese:</ion-label>
+        	<ion-select [(ngModel)]="animal.pseudociese">
+        		    <ion-option value="1">Sim</ion-option>
+              	<ion-option value="2">Não</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Idas ao Veterinário:</ion-label>
+        	<ion-select [(ngModel)]="animal.idas_vet_ano">
+        		    <ion-option value="1">Uma vez por ano</ion-option>
+              	<ion-option value="2">Duas vezes por ano</ion-option>
+              	<ion-option value="3">Três vezes por ano</ion-option>
+              	<ion-option value="4">Quatro ou mais vezes por ano</ion-option>
+              	<ion-option value="5">Nunca</ion-option>
+              	<ion-option value="8">Outro</ion-option>
+              	<ion-option value="5">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Frequencia do exame em casa:</ion-label>
+        	<ion-select [(ngModel)]="animal.idas_vet_ano">
+        		    <ion-option value="1">Uma vez por ano</ion-option>
+              	<ion-option value="2">Duas vezes por ano</ion-option>
+              	<ion-option value="3">Três vezes por ano</ion-option>
+              	<ion-option value="4">Quatro ou mais vezes por ano</ion-option>
+              	<ion-option value="5">Nunca</ion-option>
+              	<ion-option value="8">Outro</ion-option>
+              	<ion-option value="5">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     	<ion-item>
+        <ion-label fixed>Conhece exame em casa:</ion-label>
+        	<ion-select [(ngModel)]="animal.pseudociese">
+        		    <ion-option value="1">Sim</ion-option>
+              	<ion-option value="2">Não</ion-option>
+              	<ion-option value="9">Sem Informação</ion-option>
+          </ion-select>
+     	</ion-item>
+
+     
+       <button block color="lassie_default" class="entrar" ion-button round (click)="cadastrarAnimal()">Adicionar Animal</button>
+    </ion-list>
+   
+      <button block color="lassie_default" class="entrar" ion-button round (click)="abrirTumorForm()">Próximo>></button>
+
+</ion-content>

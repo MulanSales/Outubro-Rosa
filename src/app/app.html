@@ -1,0 +1,19 @@
+<ion-menu side = "left" [content]="content">
+	<ion-header>
+		<ion-toolbar color = "lassie_default">
+			<ion-title>
+				Menu
+			</ion-title>
+		</ion-toolbar>
+
+
+		<ion-list>
+	      <button menuClose ion-item *ngFor="let p of pages" (click)="goToPage(p)">
+	        {{p.nomePage}}
+	      </button>
+          <button menuClose ion-item (click)="logOut()">Sair</button>
+	    </ion-list>
+	</ion-header>
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content ></ion-nav>

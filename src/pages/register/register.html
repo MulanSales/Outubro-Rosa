@@ -1,0 +1,32 @@
+<!--
+  Generated template for the RegisterPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content>
+    <div class="cadastro-wrap">
+        <ion-img class="icone-outubrorosa" src="assets/img/logo2.png"></ion-img>
+        <h1>PetCan</h1>
+
+        <ion-list>
+            <ion-item class="user">
+                <ion-input type="email" #username placeholder="E-mail" ></ion-input>
+            </ion-item>
+
+            <ion-item class="password">
+                <ion-input type="password" #password placeholder="Senha" ></ion-input>
+            </ion-item>
+
+            <ion-item>
+              <ion-input type="password" #confirm_password placeholder="Confirme sua senha" ></ion-input>
+            </ion-item>
+            <p>Já possui conta? &ensp;<span (click)="redirectToLogin()">Clique Aqui</span></p>
+        </ion-list>
+
+        <div padding>
+              <button  block color="lassie_default" ion-button class="botao-cadastro"  (click)="cadastraUsuario()">Cadastrar</button>
+        </div>
+    </div>
+</ion-content>

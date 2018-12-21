@@ -1,0 +1,53 @@
+<!--
+  Generated template for the CadastroPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-title>Cadastro Voluntário</ion-title>
+
+</ion-header>
+
+
+<ion-content padding>
+
+	<ion-list>
+		<ion-item>
+      		<ion-label fixed>Nome:</ion-label>
+      		<ion-input type="text" [(ngModel)]="voluntario.nome"></ion-input>
+    	</ion-item>
+
+		<ion-item>
+      		<ion-label fixed>Sobrenome:</ion-label>
+      		<ion-input type="text" [(ngModel)]="voluntario.sobrenome"></ion-input>
+    	</ion-item>
+
+		<ion-item>
+      		<ion-label fixed>CRMV(Opcional):</ion-label>
+      		<ion-input type="text" [(ngModel)]="voluntario.crmv"></ion-input>
+    	</ion-item>
+
+		<ion-item>
+      		<ion-label fixed>CPF:</ion-label>
+      		<ion-input type="text" [(ngModel)]="voluntario.cpf"></ion-input>
+    	</ion-item>
+
+		<ion-item>
+      		<ion-label fixed>Telefone(1):</ion-label>
+      		<ion-input type="text" [(ngModel)]="voluntario.telefone_1"></ion-input>
+    	</ion-item>
+
+    	<ion-item>
+      		<ion-label fixed>Telefone(2):</ion-label>
+      		<ion-input type="text" [(ngModel)]="voluntario.telefone_2"></ion-input>
+    	</ion-item>
+    </ion-list>
+
+    <button ion-button color="lassie_default" (click)="cadastrarVoluntario()">Cadastrar</button>
+
+    <button ion-button color="lassie_default" (click)="cancelar()">Cancelar</button>
+
+
+</ion-content>

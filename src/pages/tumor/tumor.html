@@ -1,0 +1,89 @@
+<!--
+  Generated template for the TumorPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+    <ion-title>Tumor</ion-title>
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-list>
+    
+  <ion-card>
+    <ion-card-content>
+      <img [src]="image" *ngIf="image"/>
+    </ion-card-content>
+  </ion-card>
+
+  <button ion-button full round icon-start color="lassie_default"  (click)="tirarFoto()">Foto
+    <ion-icon name="camera"></ion-icon>
+  </button>
+
+  <ion-item>
+        <ion-label fixed>Local:</ion-label>
+        <ion-input type="text" [(ngModel)]="tumor.local"></ion-input>
+  </ion-item>
+
+  <ion-item>
+        <ion-label fixed>Tamanho:</ion-label>
+        <ion-input type="number" [(ngModel)]="tumor.tamanho"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Lateralidade:</ion-label>
+      <ion-select [(ngModel)]="tumor.lateralidade">
+          <ion-option value="1">Direita</ion-option>
+          <ion-option value="2">Esquerda</ion-option>
+          <ion-option value="3">Bilateral</ion-option>
+          <ion-option value="9">Sem Informação</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+        <ion-label fixed>Tempo de Evolução:</ion-label>
+        <ion-input type="number" [(ngModel)]="tumor.tempo_evolucao"></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Em Tratamento:</ion-label>
+      <ion-select [(ngModel)]="tumor.em_tratamento">
+          <ion-option value="1">Sim</ion-option>
+          <ion-option value="2">Não</ion-option>
+          <ion-option value="9">Sem Informação</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+    <ion-label fixed>Conhecimento Prévio:</ion-label>
+      <ion-select [(ngModel)]="tumor.conhecimento_previo">
+          <ion-option value="1">Sim</ion-option>
+          <ion-option value="2">Não</ion-option>
+          <ion-option value="9">Sem Informação</ion-option>
+      </ion-select>
+  </ion-item>
+
+  <ion-item>
+        <ion-label fixed>Observações:</ion-label>
+        <ion-textarea type="text" [(ngModel)]="tumor.observacoes"></ion-textarea>>
+  </ion-item>
+
+  <button block color="lassie_default" class="entrar" ion-button round (click)="cadastrarTumor()">Adicionar Tumor</button>
+
+</ion-list>
+
+
+	<div id="topButtons">
+		<button ion-button color="lassie_default" full center icon-bottom (click)= "finalizarForm()">
+  			<ion-icon name="md-share-alt"></ion-icon>
+  			Finalizar Formulário
+		</button>
+	</div>
+
+
+
+
+</ion-content>

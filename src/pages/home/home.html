@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar color ="lassie_default">
+       <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>PetCan</ion-title>
+      <ion-buttons end>
+     <button ion-button icon-only>
+        <ion-icon name="paw" item-end>
+           <ion-badge item-start color="light">2017</ion-badge>
+        </ion-icon>
+      </button>
+      <button ion-button icon-only>
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>  
+
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <h3 align=center>Animais no Evento</h3>
+
+ 
+  <ion-list>
+    <ion-item *ngFor="let animal of animaisLista | async" (click)="editarAnimal(animal.$key, animal)">
+      <img src="assets/img/dog.png">
+      <h2>
+        NOME: {{animal.nome}} 
+      </h2>
+      <h3>
+        IDADE: {{animal.idade}}
+        RAÇA: {{animal.raca}}
+      </h3>
+    </ion-item>
+  </ion-list>
+
+
+   <ion-fab right bottom>
+    <button ion-fab color="lassie_default" (click) = "abrirForm()"><ion-icon name="add"></ion-icon></button>
+  </ion-fab>
+</ion-content>
+
+
+

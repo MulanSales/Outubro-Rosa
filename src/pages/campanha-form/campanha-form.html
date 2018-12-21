@@ -1,0 +1,39 @@
+<!--
+  Generated template for the CampanhaFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>campanha_form</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+ <ion-list>
+    <ion-item>
+      <ion-label fixed>Nome:</ion-label>
+      <ion-input type="text" [(ngModel)]="campanha.nome"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label fixed>Ano:</ion-label>
+      <ion-input type="text" [(ngModel)]="campanha.ano"></ion-input>
+    </ion-item>
+      <ion-item>
+       <ion-label>Pais</ion-label>
+        <ion-select [(ngModel)]="campanha.pais" multiple="true">
+          <ion-option value="Brasil" >Brasil</ion-option>
+          <ion-option value="Outro">Outro</ion-option>
+        </ion-select>
+     </ion-item>
+    <ion-item>
+      <button ion-button color="lassie_default" (click)="cadastrarCampanha()">Cadastrar</button>
+    </ion-item>
+ </ion-list>    
+
+</ion-content>

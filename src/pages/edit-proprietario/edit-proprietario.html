@@ -1,0 +1,189 @@
+<ion-header>
+
+  <ion-navbar color="lassie_default">
+    
+    <button ion-button color="lassie_default" icon-only (click)="fechar()">
+        <ion-icon name="close"></ion-icon>
+    </button>
+
+    <ion-title>Editar Proprietario</ion-title>
+
+  </ion-navbar>
+
+  <ion-toolbar>
+    <ion-segment [(ngModel)]="proprietario_update" color="lassie_default">
+      <ion-segment-button value="display">
+        <ion-icon name="clipboard"></ion-icon>
+      </ion-segment-button>
+      <ion-segment-button value="update">
+        <ion-icon name="cloud-upload"></ion-icon>
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content padding>
+	<div [ngSwitch]="proprietario_update">
+		<ion-list *ngSwitchCase="'update'">
+
+		<ion-item>
+          <ion-label>Autoriza Contato?</ion-label>
+          <ion-toggle value="foo" checked="true" unchecked="false"[(ngModel)]="proprietario.auto_contato"></ion-toggle>
+      	</ion-item>
+
+		  <ion-item>
+      		<ion-label fixed>Nome:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.nome"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Sobrenome:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.sobrenome"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Gênero:</ion-label>
+      		<ion-select [(ngModel)]="proprietario.genero">
+      			<ion-option value="f">Feminino</ion-option>
+            	<ion-option value="m">Masculino</ion-option>
+            </ion-select>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Data de Nascimento:</ion-label>
+      		<ion-input type="date" [(ngModel)]="proprietario.data_de_nascimento"></ion-input>
+   		</ion-item>
+
+
+   		<ion-item>
+      		<ion-label fixed>Tel. 1:</ion-label>
+      		<ion-input type="number" [(ngModel)]="proprietario.telefone_1"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Tel. 2:</ion-label>
+      		<ion-input type="number" [(ngModel)]="proprietario.telefone_2"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Email:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.email"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Estado Civil:</ion-label>
+      		<ion-select [(ngModel)]="proprietario.estado_civil">
+      		    <ion-option value="1">Solteiro</ion-option>
+            	<ion-option value="2">Casado</ion-option>
+            	<ion-option value="3">Viúvo</ion-option>
+            	<ion-option value="3">Divorciado</ion-option>
+            	<ion-option value="9">Sem Informação</ion-option>
+            </ion-select>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Rua:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.rua"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>CEP:</ion-label>
+      		<ion-input type="number" [(ngModel)]="proprietario.cep"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Numero:</ion-label>
+      		<ion-input type="number" [(ngModel)]="proprietario.numero"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Complemento:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.complemento"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Bairro:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.bairro"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Cidade:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.cidade"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>Estado:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.estado"></ion-input>
+   		</ion-item>
+
+   		<ion-item>
+      		<ion-label fixed>País:</ion-label>
+      		<ion-input type="text" [(ngModel)]="proprietario.pais"></ion-input>
+   		</ion-item>
+
+     	<ion-item>
+      		<button ion-button color="lassie_default" (click)="salvarDados()">Atualizar</button>
+    	</ion-item>
+
+		</ion-list>
+
+		<ion-list *ngSwitchCase="'display'">
+			<ion-item *ngIf="proprietario_car"  >
+				<img src="assets/img/student.png">
+				Formulário Atual
+        <div>
+              Autoriza Contato?: {{proprietario_car.auto_contato}}
+        </div>
+
+				<div>
+        			Nome: {{proprietario_car.nome}} 
+              {{proprietario_car.sobrenome}}
+        </div>
+              
+        <div>
+              Gênero: {{proprietario_car.genero}}
+        </div>
+        <div>
+              Data de Nascimento: {{proprietario_car.data_de_nascimento}}
+        </div>
+        <div>
+              Telefone(1): {{proprietario_car.telefone_1}}
+        </div>
+        <div>
+              Telefone(2): {{proprietario_car.telefone_2}}
+        </div>
+        <div>
+              Email: {{proprietario_car.email}}
+        </div>
+        <div>
+              Estado Civil: {{proprietario_car.estado_civil}}
+        </div>
+        <div>
+              Rua: {{proprietario_car.rua}}
+        </div>
+        <div>
+              CEP: {{proprietario_car.cep}}
+        </div>
+        <div>
+              Complemento: {{proprietario_car.complemento}}
+        </div>
+        <div>
+              Bairro: {{proprietario_car.bairro}}
+        </div>
+        <div>
+              Cidade: {{proprietario_car.cidade}}
+        </div>
+        <div>
+              Estado: {{proprietario_car.estado}}
+        </div>
+        <div>
+              Pais: {{proprietario_car.pais}}
+        </div>
+
+        	</ion-item>
+		</ion-list>
+	</div>
+
+</ion-content>
